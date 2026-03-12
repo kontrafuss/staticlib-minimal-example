@@ -12,6 +12,9 @@
         <Projects Include="MyApp\MyApp.cbproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="AnotherApp\AnotherApp.cbproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="MyApp:Make">
         <MSBuild Projects="MyApp\MyApp.cbproj" Targets="Make"/>
     </Target>
+    <Target Name="AnotherApp">
+        <MSBuild Projects="AnotherApp\AnotherApp.cbproj"/>
+    </Target>
+    <Target Name="AnotherApp:Clean">
+        <MSBuild Projects="AnotherApp\AnotherApp.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnotherApp:Make">
+        <MSBuild Projects="AnotherApp\AnotherApp.cbproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="MyLib;MyPackage;MyApp"/>
+        <CallTarget Targets="MyLib;MyPackage;MyApp;AnotherApp"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="MyLib:Clean;MyPackage:Clean;MyApp:Clean"/>
+        <CallTarget Targets="MyLib:Clean;MyPackage:Clean;MyApp:Clean;AnotherApp:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="MyLib:Make;MyPackage:Make;MyApp:Make"/>
+        <CallTarget Targets="MyLib:Make;MyPackage:Make;MyApp:Make;AnotherApp:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

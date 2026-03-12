@@ -1,32 +1,21 @@
 //---------------------------------------------------------------------------
 
-#ifndef TMonitorFrameH
-#define TMonitorFrameH
+#ifndef TAnotherMainFormH
+#define TAnotherMainFormH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
-#include <Vcl.ExtCtrls.hpp>
-#include <Vcl.Imaging.pngimage.hpp>
 //---------------------------------------------------------------------------
-#if defined(MYLIB_AS_PACKAGE)
-#define MYLIB_DECLSPEC __declspec(package)
-#elif defined(MYLIB_EXPORTS)
-#define MYLIB_DECLSPEC __declspec(dllexport)
-#else
-#define MYLIB_DECLSPEC __declspec(dllimport)
-#endif
-
-class MYLIB_DECLSPEC TMonitorFrame : public TFrame
+class TAnotherMainForm : public TForm
 {
 __published:	// IDE-managed Components
-	TImage *Image1;
 private:	// User declarations
 public:		// User declarations
-	__fastcall TMonitorFrame(TComponent* Owner);
+	__fastcall TAnotherMainForm(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TMonitorFrame *MonitorFrame;
+extern PACKAGE TAnotherMainForm *AnotherMainForm;
 //---------------------------------------------------------------------------
 #endif

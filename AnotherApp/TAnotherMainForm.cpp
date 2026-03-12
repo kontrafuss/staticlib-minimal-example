@@ -3,16 +3,17 @@
 #include <vcl.h>
 #pragma hdrstop
 
+#include "TAnotherMainForm.h"
 #include "TMonitorFrame.h"
-#include "TMonitorForm.h"
+
+#pragma link "MyPackage.bpi"
+
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-
-#pragma link "MyLib.lib"
-
+TAnotherMainForm *AnotherMainForm;
 //---------------------------------------------------------------------------
-__fastcall TMonitorForm::TMonitorForm(TComponent* Owner)
+__fastcall TAnotherMainForm::TAnotherMainForm(TComponent* Owner)
 	: TForm(Owner)
 {
     auto frame = new TMonitorFrame(this);
