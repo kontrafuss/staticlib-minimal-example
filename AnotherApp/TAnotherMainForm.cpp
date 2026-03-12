@@ -16,8 +16,5 @@ TAnotherMainForm *AnotherMainForm;
 __fastcall TAnotherMainForm::TAnotherMainForm(TComponent* Owner)
 	: TForm(Owner)
 {
-    auto frame = new TMonitorFrame(this);
-    frame->Parent = this;
-    AutoSize = true;
 }
 //---------------------------------------------------------------------------
