@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{274534F1-B9F0-407B-91BD-1254CC6D8343}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="MyLib\MyLib.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MyPackage\MyPackage.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MyApp\MyApp.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MyLib">
+        <MSBuild Projects="MyLib\MyLib.cbproj"/>
+    </Target>
+    <Target Name="MyLib:Clean">
+        <MSBuild Projects="MyLib\MyLib.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MyLib:Make">
+        <MSBuild Projects="MyLib\MyLib.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="MyPackage">
+        <MSBuild Projects="MyPackage\MyPackage.cbproj"/>
+    </Target>
+    <Target Name="MyPackage:Clean">
+        <MSBuild Projects="MyPackage\MyPackage.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MyPackage:Make">
+        <MSBuild Projects="MyPackage\MyPackage.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="MyApp">
+        <MSBuild Projects="MyApp\MyApp.cbproj"/>
+    </Target>
+    <Target Name="MyApp:Clean">
+        <MSBuild Projects="MyApp\MyApp.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MyApp:Make">
+        <MSBuild Projects="MyApp\MyApp.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MyLib;MyPackage;MyApp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MyLib:Clean;MyPackage:Clean;MyApp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MyLib:Make;MyPackage:Make;MyApp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
