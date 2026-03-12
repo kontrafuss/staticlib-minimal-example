@@ -16,6 +16,4 @@ public:		// User declarations
 	__fastcall TMonitorForm(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TMonitorForm *MonitorForm;
-//---------------------------------------------------------------------------
 #endif

@@ -61,7 +61,7 @@
         <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
         <DynamicRTL>true</DynamicRTL>
         <UsePackages>true</UsePackages>
-        <IntermediateOutputDir>.\$(Platform)\$(Config)</IntermediateOutputDir>
+        <IntermediateOutputDir>..\build\$(Platform)\$(Config)\$(ProjectName)</IntermediateOutputDir>
         <BCC_wpar>false</BCC_wpar>
         <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
         <BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
@@ -72,11 +72,12 @@
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
-        <FinalOutputDir>.\$(Platform)\$(Config)</FinalOutputDir>
+        <FinalOutputDir>..\build\$(Platform)\$(Config)</FinalOutputDir>
         <VerInfo_Locale>1031</VerInfo_Locale>
         <SanitizedProjectName>MyPackage</SanitizedProjectName>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <BCC_PCHUsage>None</BCC_PCHUsage>
-        <BPILibOutputDir>.\$(Platform)\$(Config)</BPILibOutputDir>
+        <BPILibOutputDir>..\build\$(Platform)\$(Config)</BPILibOutputDir>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindcompvclsmp;bindcompvclwinx;bindengine;CloudService;CommonUI;CustomIPTransport;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXInterBaseDriver;DBXMySQLDriver;DBXSqliteDriver;dsnap;dsnapcon;dsnapxml;FireDAC;FireDACADSDriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACIBDriver;FireDACMSAccDriver;FireDACMySQLDriver;FireDACPgDriver;FireDACSqliteDriver;fmx;FMX_SignalLabScopePkg;fmxase;fmxdae;fmxFireDAC;fmxobj;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;inetstn;Mitov_BasicLab;Mitov_FMX_BasicLab;Mitov_Runtime;Mitov_VCL_BasicLab;Mitov_VCL_Runtime;OpenWireBindingDatabasePkg;OpenWireBindingFmxPkg;OpenWireBindingPkg;OpenWireBindingVclPkg;OpenWireEditorBasicPkg;OpenWireEditorPkg;OpenWireLabPkg;OpenWirePkg;OpenWireStudioHostPkg;PlotLabPkg;RESTBackendComponents;RESTComponents;rtl;SignalLabBasicPkg;SignalLabScopePkg;Skia;soapmidas;soaprtl;soapserver;tethering;TimingLabBasicPkg;vcl;vclactnband;vcldb;vcldsnap;vcledge;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
