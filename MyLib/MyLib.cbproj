@@ -60,7 +60,7 @@
         <DynamicRTL>true</DynamicRTL>
         <VerInfo_Locale>1031</VerInfo_Locale>
         <BCC_PCHUsage>None</BCC_PCHUsage>
-        <Defines>MYLIB_AS_PACKAGE;$(Defines)</Defines>
+        <Defines>MYLIB_AS_PACKAGE;USEPACKAGES;$(Defines)</Defines>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindcompvclsmp;bindcompvclwinx;bindengine;CloudService;CommonUI;CustomIPTransport;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXInterBaseDriver;DBXMySQLDriver;DBXSqliteDriver;dsnap;dsnapcon;dsnapxml;FireDAC;FireDACADSDriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACIBDriver;FireDACMSAccDriver;FireDACMySQLDriver;FireDACPgDriver;FireDACSqliteDriver;fmx;FMX_SignalLabScopePkg;fmxase;fmxdae;fmxFireDAC;fmxobj;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;inetstn;Mitov_BasicLab;Mitov_FMX_BasicLab;Mitov_Runtime;Mitov_VCL_BasicLab;Mitov_VCL_Runtime;OpenWireBindingDatabasePkg;OpenWireBindingFmxPkg;OpenWireBindingPkg;OpenWireBindingVclPkg;OpenWireEditorBasicPkg;OpenWireEditorPkg;OpenWireLabPkg;OpenWirePkg;OpenWireStudioHostPkg;PlotLabPkg;RESTBackendComponents;RESTComponents;rtl;SignalLabBasicPkg;SignalLabScopePkg;Skia;soapmidas;soaprtl;soapserver;tethering;TimingLabBasicPkg;vcl;vclactnband;vcldb;vcldsnap;vcledge;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
@@ -76,6 +76,7 @@
         <PackageImports>adortl;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindcompvclsmp;bindcompvclwinx;bindengine;CloudService;CommonUI;CustomIPTransport;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXInterBaseDriver;DBXMySQLDriver;DBXSqliteDriver;dsnap;dsnapcon;dsnapxml;FireDAC;FireDACADSDriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACIBDriver;FireDACMSAccDriver;FireDACMySQLDriver;FireDACPgDriver;FireDACSqliteDriver;fmx;FMX_SignalLabScopePkg;fmxase;fmxdae;fmxFireDAC;fmxobj;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;inetstn;Mitov_BasicLab;Mitov_FMX_BasicLab;Mitov_Runtime;Mitov_VCL_BasicLab;Mitov_VCL_Runtime;OpenWireBindingDatabasePkg;OpenWireBindingFmxPkg;OpenWireBindingPkg;OpenWireBindingVclPkg;OpenWireEditorBasicPkg;OpenWireEditorPkg;OpenWireLabPkg;OpenWirePkg;OpenWireStudioHostPkg;PlotLabPkg;RESTBackendComponents;RESTComponents;rtl;SignalLabBasicPkg;SignalLabScopePkg;Skia;soapmidas;soaprtl;soapserver;tethering;TimingLabBasicPkg;vcl;vclactnband;vcldb;vcldsnap;vcledge;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
         <BCC_EnableBatchCompilation>true</BCC_EnableBatchCompilation>
+        <BCC_UserSuppliedOptions>-tP</BCC_UserSuppliedOptions>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
